@@ -1,0 +1,12 @@
+.footer {
+  text-align: center;
+  font-size: larger;
+}
+footer img {
+  height: 60px;
+  position: relative;
+  left: 35%;
+}
+footer {
+  height: 88px;
+}

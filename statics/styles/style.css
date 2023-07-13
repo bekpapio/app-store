@@ -1,0 +1,30 @@
+.bottom {
+  background-color: rgb(27, 27, 27);
+  opacity: 12;
+}
+.bottom .box-container {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.bottom .box-container .box:hover {
+  transform: translateY(-10px);
+}
+.bottom .box-container .box h3 {
+  font-size: 30px;
+  font: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  padding: 8px;
+}
+.bottom .box-container .box p {
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  padding-bottom: 10px;
+}

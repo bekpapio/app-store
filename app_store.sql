@@ -1,0 +1,115 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 05, 2022 at 03:22 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `app_store`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `ID` int(11) NOT NULL,
+  `USER_NAME` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `EMAIL` varchar(244) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `PASSWORD` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`ID`, `USER_NAME`, `EMAIL`, `PASSWORD`) VALUES
+(1, 'beka', 'bekatolesa@gmail.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apps`
+--
+
+CREATE TABLE `apps` (
+  `ID` int(11) NOT NULL,
+  `NAME` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SIZE` int(11) DEFAULT NULL,
+  `CATEGORY` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `REQUIRMENT` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `OS_SYSTEM` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DESCRIPTION` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `IMAGE` blob DEFAULT NULL,
+  `CREATED_DATE` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `apps`
+--
+
+INSERT INTO `apps` (`ID`, `NAME`, `SIZE`, `CATEGORY`, `REQUIRMENT`, `OS_SYSTEM`, `DESCRIPTION`, `IMAGE`, `CREATED_DATE`) VALUES
+(11, 'AUTO CAD', 24, 'GRAPHICS', '2GHZ/2RAM/GRAPHICS CARD', 'WINDOW/LINUX', '', 0x6175746f6361642e6a7067, '2022-01-23 16:21:30'),
+(15, 'SMADAV', 1, 'ANTIVIRUS', '2GB RAM', 'window/linux/MACOS', '', 0x736d616461762e706e67, '2022-01-23 16:51:04'),
+(17, 'NEED FOR SPEED', 45, 'GAME', '4GB ram/GRAPHICS CARD', 'WINDOWS/LINUX', '', 0x6e65656420666f7220737065656420332e6a7067, '2022-01-23 18:32:09'),
+(18, 'ADOBE PHOTOSHOP', 3, 'GRAPHICS', '6GB RAM/', 'WINDOWS', '', 0x70686f746f73686f702e706e67, '2022-01-23 18:32:47'),
+(20, 'ASSASSIN CREED', 17, 'GAME', '2GHZ/GRAPHICS CARD/4GB RAM', 'WINDOWS/LINUX/MACOS', '', 0x617373617373696e732063726565642076616c68616c6c612e6a7067, '2022-01-24 04:59:13'),
+(21, 'CALL OF DUTY', 16, 'GAME', '4GB RAM/2.2 GHZ PROCESSOR/ ', 'WINDOW/LINUX', '#1 WORLD WAR GAME', 0x63616c6c206f66206475747920312e6a7067, '2022-01-25 03:01:34'),
+(22, 'WINDOW 10', 5, 'OPERTAIING SYSTEM', 'PC', 'WINDOW', '', 0x57696e646f77732031302e6a7067, '2022-01-25 03:03:08'),
+(23, 'AVAST', 4, 'ANTI VIRUS', '2GB RAM', 'WINDOWS/LINUX/MACOS', '', 0x61766173742e706e67, '2022-01-25 03:16:55'),
+(24, 'ADOBE ILLUSTRATOR', 9, 'GRAPHICS', '4GB RAM', 'WINDOWS', '', 0x696c6c7573747261746f722e706e67, '2022-01-25 03:18:20'),
+(25, 'WINDOW 11', 6, 'OPERTAIING SYSTEM', 'PC', 'WINDOWS', '', 0x77696e646f777320313120312e6a7067, '2022-01-25 03:20:17'),
+(26, 'PES GAMES', 13, 'GAME', '4GB RAM/2.5 GHZ PROCESSOR/', 'WINDOWS', '', 0x70657320312e6a7067, '2022-01-25 03:21:21'),
+(29, 'UBUNTU', 45, 'OPERTAIING SYSTEM', '2GHZ/GRAPHICS CARD/4GB RAM', 'WINDOWS/LINUX/MACOS', '', 0x7562756e747520312e706e67, '2022-02-05 03:17:35');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `apps`
+--
+ALTER TABLE `apps`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `apps`
+--
+ALTER TABLE `apps`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
